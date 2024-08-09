@@ -2,12 +2,12 @@ import os
 import pandas as pd
 from datetime import datetime
 
-# Dossier contenant les fichiers .dat
-folder_path = "/Users/lucaspetit/Documents/Mémoire/SIMULATIONS/sim_2022_1an/"
+# Dossier contenant les fichiers de sortie de SIRANE .dat
+folder_path = "/Users/.../sim_2022_1an/"
 
-# Chemin d'accès pour enregistrer le fichier Excel
-excel_path = "/Users/lucaspetit/Documents/Mémoire/SIMULATIONS/data_by_station_minuit.xlsx"
-excel_path12 = "/Users/lucaspetit/Documents/Mémoire/SIMULATIONS/data_by_station_midi.xlsx"
+# Chemin d'accès pour enregistrer les fichiers Excel
+excel_path = "/Users/.../data_by_station_minuit.xlsx"
+excel_path12 = "/Users/.../data_by_station_midi.xlsx"
 
 # Liste des noms de station
 stations = [
@@ -21,10 +21,7 @@ stations = [
 def convert_to_datetime(date_str):
     return datetime.strptime(date_str, '%d/%m/%Y %H:%M')
 
-
-
-#%% MINUIT
-
+#%% MINUIT %%%
 
 # Créer un fichier Excel pour enregistrer les données
 writer = pd.ExcelWriter(excel_path, engine='xlsxwriter')
@@ -86,7 +83,7 @@ for station in stations:
 # Fermer le fichier Excel
 writer.save()
 
-#%% MIDI 
+#%%% MIDI %%%
 
 # Créer un fichier Excel pour enregistrer les données
 writer12 = pd.ExcelWriter(excel_path12, engine='xlsxwriter')
