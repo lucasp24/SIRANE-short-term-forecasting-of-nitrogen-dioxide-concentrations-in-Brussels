@@ -95,7 +95,7 @@ def generate_fond_file_name(start_date):
     return f"FOND/ALL/date_{formatted_date}_levtype_pl_time_{formatted_hour}_00_00_convert.dat"
 
 
-# Date de début de la simulation (à minuit) 
+# Date de début de la simulation Y/M/D H:M (01/01/2022 à minuit) 
 start_date = datetime(2022, 1, 1, 0, 0)
 
 # Durée totale de la simulation (1 an)
